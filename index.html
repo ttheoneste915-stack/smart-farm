@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Umurima Fresh | Farm-fresh produce delivered in Kigali</title>
+  <meta name="description" content="A weekly box of fresh produce from cooperatives in Rulindo and Kamonyi, delivered to your door in Kigali. Order on WhatsApp before 8 PM.">
+  <meta name="theme-color" content="#1F5D3A">
+  <meta property="og:title" content="Umurima Fresh | Farm-fresh produce delivered in Kigali">
+  <meta property="og:description" content="Harvested at dawn. Delivered by dinner. Order a weekly produce box on WhatsApp.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%231F5D3A'/%3E%3Cpath d='M8 21c0-7 5-11 16-12-3 10-8 14-16 12Z' fill='%23F2B233'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Icon library -->
+  <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+    <symbol id="i-whatsapp" viewBox="0 0 24 24">
+      <path d="M12.04 2a9.9 9.9 0 0 0-8.5 15l-1.3 4.8 4.9-1.3A9.9 9.9 0 1 0 12.04 2Zm0 1.8a8.1 8.1 0 1 1-4.1 15.1l-.3-.2-2.9.8.8-2.8-.2-.3a8.1 8.1 0 0 1 6.7-12.6Zm-3.2 4c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.7 4.2 3.7 2.1.8 2.5.7 3 .6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.3-.2-.6-.3l-1.7-.8c-.2-.1-.4-.1-.6.1l-.7.9c-.1.2-.3.2-.5.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.7-1.7c-.2-.4-.4-.4-.6-.4h-.4Z"/>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24">
+      <path d="M5 12h14M13 6l6 6-6 6"/>
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24">
+      <path d="m5 12 4 4L19 6"/>
+    </symbol>
+    <symbol id="i-basket" viewBox="0 0 24 24">
+      <path d="M4.5 9.5h15l-1.6 10.5H6.1L4.5 9.5Z"/>
+      <path d="M8 9.5a4 4 0 0 1 8 0"/>
+      <path d="M9 13.5v3M12 13.5v3M15 13.5v3"/>
+    </symbol>
+    <symbol id="i-sunrise" viewBox="0 0 24 24">
+      <path d="M3 19h18"/>
+      <path d="M6.5 19a5.5 5.5 0 0 1 11 0"/>
+      <path d="M12 3v3M4.2 6.2l2.1 2.1M19.8 6.2l-2.1 2.1"/>
+    </symbol>
+    <symbol id="i-moto" viewBox="0 0 24 24">
+      <circle cx="5.5" cy="17" r="3"/>
+      <circle cx="18.5" cy="17" r="3"/>
+      <path d="M8.5 17h7l-2-6h-3"/>
+      <path d="M13.5 11h4l1.5 6"/>
+      <path d="M14 8h3"/>
+    </symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24">
+      <path d="M12 3 5 6v5c0 5 3 8 7 10 4-2 7-5 7-10V6l-7-3Z"/>
+      <path d="m9 12 2 2 4-4"/>
+    </symbol>
+    <symbol id="i-qr" viewBox="0 0 24 24">
+      <rect x="3.5" y="3.5" width="6" height="6" rx="1"/>
+      <rect x="14.5" y="3.5" width="6" height="6" rx="1"/>
+      <rect x="3.5" y="14.5" width="6" height="6" rx="1"/>
+      <rect x="14.5" y="14.5" width="2" height="2"/>
+      <rect x="18.5" y="14.5" width="2" height="2"/>
+      <rect x="14.5" y="18.5" width="2" height="2"/>
+      <rect x="18.5" y="18.5" width="2" height="2"/>
+    </symbol>
+    <symbol id="i-cash" viewBox="0 0 24 24">
+      <rect x="3" y="6" width="18" height="12" rx="2"/>
+      <circle cx="12" cy="12" r="3"/>
+      <path d="M6.5 9.5h.01M17.5 14.5h.01"/>
+    </symbol>
+    <symbol id="i-invoice" viewBox="0 0 24 24">
+      <path d="M6 3h9l3 3v15H6z"/>
+      <path d="M15 3v4h4"/>
+      <path d="M9 11h6M9 15h6M9 19h4"/>
+    </symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24">
+      <path d="M5 4h4l2 5-2.5 1.5a13 13 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/>
+    </symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24">
+      <rect x="3" y="5" width="18" height="14" rx="2"/>
+      <path d="m4 7 8 6 8-6"/>
+    </symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M12 7v5l3 2"/>
+    </symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24">
+      <path d="M12 21s7-5.5 7-12a7 7 0 1 0-14 0c0 6.5 7 12 7 12Z"/>
+      <circle cx="12" cy="9" r="2.5"/>
+    </symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24">
+      <path d="M4 7h16M4 12h16M4 17h16"/>
+    </symbol>
+    <symbol id="i-close" viewBox="0 0 24 24">
+      <path d="M6 6l12 12M18 6 6 18"/>
+    </symbol>
+    <symbol id="i-logo" viewBox="0 0 40 40">
+      <circle cx="20" cy="20" r="19" fill="currentColor"/>
+      <path d="M11 25c0-8 5-13 18-14-3 12-9 16-18 14Z" fill="#F2B233"/>
+      <path d="M11 26c4-6 8-9 15-12" stroke="#1F5D3A" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+    </symbol>
+  </svg>
+
+  <!-- Header -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="logo" href="#top" aria-label="Umurima Fresh home">
+        <span class="logo-mark">
+          <svg class="logo-svg" viewBox="0 0 40 40" aria-hidden="true"><use href="#i-logo"/></svg>
+        </span>
+        <span class="logo-text">Umurima <em>Fresh</em></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Main navigation">
+        <a href="#how">How it works</a>
+        <a href="#boxes">Our boxes</a>
+        <a href="#delivery">Delivery</a>
+        <a href="#why">Why us</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn--primary header-cta" href="https://wa.me/2507XXXXXXXX?text=Muraho%20Umurima%20Fresh!%20I%27d%20like%20to%20order.%20My%20name%20is%3A%20____.%20My%20zone%20is%3A%20____." target="_blank" rel="noopener" aria-label="Order on WhatsApp">
+          <svg class="icon icon--solid" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+          <span>Order on WhatsApp</span>
+        </a>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+          <svg class="icon menu-open" aria-hidden="true"><use href="#i-menu"/></svg>
+          <svg class="icon menu-close" aria-hidden="true"><use href="#i-close"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Kigali farm-to-table</p>
+          <h1>Harvested at <span class="accent">dawn.</span><br>Delivered by dinner.</h1>
+          <p class="hero-sub">A weekly box of fresh produce from cooperatives in Rulindo and Kamonyi — delivered to your door in Kigali. No market trip. No bargaining. No hidden spoilage.</p>
+          <div class="hero-actions">
+            <a class="btn btn--primary" href="https://wa.me/2507XXXXXXXX?text=Muraho%20Umurima%20Fresh!%20I%27d%20like%20to%20order%20this%20week%27s%20box.%20My%20zone%20is%3A%20____.%20My%20name%20is%3A%20____." target="_blank" rel="noopener">
+              Order this week's box
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="#boxes">See what's inside</a>
+          </div>
+          <ul class="hero-trust">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> 3 partner cooperatives</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Harvest-day delivery</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Replacement guarantee</li>
+          </ul>
+          <p class="hero-price"><strong>Family Box RWF 14,500 delivered</strong> · Student Saver from RWF 4,500</p>
+        </div>
+
+        <div class="hero-art reveal">
+          <svg class="hero-svg" viewBox="0 0 600 620" role="img" aria-labelledby="heroTitle heroDesc">
+            <title id="heroTitle">This week's Umurima Fresh produce box</title>
+            <desc id="heroDesc">An illustrated box filled with potatoes, tomatoes, onions, carrots, cabbage, eggs, bananas, pineapple and leafy greens.</desc>
+            <defs>
+              <pattern id="heroWeave" width="18" height="18" patternUnits="userSpaceOnUse">
+                <path d="M0 9 9 0l9 9-9 9Z" fill="none" stroke="#1F5D3A" stroke-opacity=".07"/>
+              </pattern>
+              <filter id="heroShadow" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#1E1E1E" flood-opacity=".12"/>
+              </filter>
+            </defs>
+            <rect width="600" height="620" rx="34" fill="#F2EBDD"/>
+            <rect width="600" height="620" rx="34" fill="url(#heroWeave)"/>
+            <circle cx="492" cy="112" r="76" fill="#F2B233" opacity=".4"/>
+            <circle cx="96" cy="548" r="54" fill="#6B8E4E" opacity=".18"/>
+            <g filter="url(#heroShadow)">
+              <rect x="60" y="70" width="480" height="500" rx="30" fill="#D8B98B"/>
+              <rect x="80" y="90" width="440" height="460" rx="22" fill="#FBF7EC"/>
+            </g>
+            <g transform="translate(104 112)">
+              <rect width="186" height="58" rx="10" fill="#1F5D3A"/>
+              <text x="16" y="22" fill="#F2B233" font-family="Poppins, sans-serif" font-size="9.5" font-weight="600" letter-spacing="2.2">UMURIMA FRESH</text>
+              <text x="16" y="42" fill="#FFFFFF" font-family="Poppins, sans-serif" font-size="14" font-weight="600">This week's box</text>
+            </g>
+            <g transform="translate(158 250)">
+              <ellipse cx="-22" cy="8" rx="38" ry="27" fill="#C08A5A"/>
+              <ellipse cx="28" cy="-4" rx="34" ry="24" fill="#CE9A68"/>
+              <ellipse cx="2" cy="30" rx="30" ry="22" fill="#B57C4D"/>
+              <ellipse cx="-30" cy="2" rx="10" ry="5" fill="#A96F43" opacity=".55"/>
+              <ellipse cx="24" cy="-10" rx="8" ry="4" fill="#A96F43" opacity=".5"/>
+              <ellipse cx="8" cy="28" rx="7" ry="3.5" fill="#A96F43" opacity=".55"/>
+            </g>
+            <g transform="translate(330 242)">
+              <circle cx="-30" cy="8" r="34" fill="#D94F3D"/>
+              <circle cx="30" cy="-2" r="32" fill="#E05B47"/>
+              <circle cx="0" cy="34" r="28" fill="#C94333"/>
+              <path d="M-30-18c4-8 12-8 16 0-4 2-10 2-16 0Z" fill="#6B8E4E"/>
+              <path d="M30-28c4-8 12-8 16 0-4 2-10 2-16 0Z" fill="#6B8E4E"/>
+              <path d="M0 8c4-8 12-8 16 0-4 2-10 2-16 0Z" fill="#6B8E4E"/>
+              <circle cx="-40" cy="-2" r="8" fill="#F08A78" opacity=".5"/>
+              <circle cx="20" cy="-12" r="7" fill="#F08A78" opacity=".45"/>
+            </g>
+            <g transform="translate(462 266)">
+              <circle cx="-8" cy="0" r="36" fill="#8E5A8E"/>
+              <circle cx="40" cy="24" r="30" fill="#9C679C"/>
+              <path d="M-8-32c-3-8 2-14 8-18-1 8 1 13 6 18" fill="#6B8E4E"/>
+              <path d="M40-4c-3-8 2-14 8-18-1 8 1 13 6 18" fill="#6B8E4E"/>
+              <path d="M-24-8c10-10 22-10 32 0M-22 8c10-10 22-10 32 0M24 16c9-9 20-9 28 0" stroke="#7A4A7A" stroke-width="2" fill="none" opacity=".6"/>
+            </g>
+            <g transform="translate(150 410) rotate(-18)">
+              <path d="M-14-40c-12 26-10 52 4 78 14-26 16-52 4-78Z" fill="#E8833A"/>
+              <path d="M-10-40c-2 20 0 40 4 60M2-40c2 20 0 40-4 60" stroke="#D46F2A" stroke-width="2" opacity=".6"/>
+              <path d="M-8-42c-10-14-8-24 0-30 4 10 8 16 14 20M4-42c2-14 8-22 16-24-2 12-6 20-12 26" stroke="#6B8E4E" stroke-width="5" fill="none" stroke-linecap="round"/>
+            </g>
+            <g transform="translate(212 452) rotate(12)">
+              <path d="M-14-40c-12 26-10 52 4 78 14-26 16-52 4-78Z" fill="#E8833A"/>
+              <path d="M-10-40c-2 20 0 40 4 60M2-40c2 20 0 40-4 60" stroke="#D46F2A" stroke-width="2" opacity=".6"/>
+              <path d="M-8-42c-10-14-8-24 0-30 4 10 8 16 14 20M4-42c2-14 8-22 16-24-2 12-6 20-12 26" stroke="#6B8E4E" stroke-width="5" fill="none" stroke-linecap="round"/>
+            </g>
+            <g transform="translate(312 430)">
+              <circle r="56" fill="#6B8E4E"/>
+              <path d="M-44 8c-8-30 14-52 44-52s52 22 44 52" fill="none" stroke="#87A968" stroke-width="6"/>
+              <path d="M-30 26c-2-24 12-40 30-40s32 16 30 40" fill="none" stroke="#87A968" stroke-width="6"/>
+              <path d="M0-52c-8 18-8 48 0 70M-28-40c2 20 8 38 18 50M28-40c-2 20-8 38-18 50" stroke="#587A40" stroke-width="3" fill="none" opacity=".6"/>
+              <path d="M-56 0c14-10 30-10 44 0M56 0c-14-10-30-10-44 0" stroke="#587A40" stroke-width="3" fill="none" opacity=".5"/>
+            </g>
+            <g transform="translate(440 428)">
+              <rect x="-46" y="-28" width="92" height="58" rx="12" fill="#D8C7A6"/>
+              <ellipse cx="-24" cy="-2" rx="18" ry="22" fill="#FFF8E8"/>
+              <ellipse cx="0" cy="-2" rx="18" ry="22" fill="#FDF1D8"/>
+              <ellipse cx="24" cy="-2" rx="18" ry="22" fill="#FFF8E8"/>
+              <ellipse cx="-24" cy="-10" rx="6" ry="8" fill="#FFFFFF" opacity=".7"/>
+              <ellipse cx="0" cy="-10" rx="6" ry="8" fill="#FFFFFF" opacity=".6"/>
+              <ellipse cx="24" cy="-10" rx="6" ry="8" fill="#FFFFFF" opacity=".7"/>
+            </g>
+            <g transform="translate(150 498)">
+              <path d="M-34 12c18 22 48 22 66 0-6 26-24 40-46 36-20-4-30-18-20-36Z" fill="#F2C94C"/>
+              <path d="M-28 16c14 14 36 14 52 0" stroke="#D9A92F" stroke-width="4" fill="none"/>
+              <path d="M-34 12c-4-8-2-14 4-18 2 8 6 12 12 14" fill="#6B8E4E"/>
+            </g>
+            <g transform="translate(322 494)">
+              <ellipse cx="0" cy="6" rx="34" ry="42" fill="#E8B23A"/>
+              <path d="M-30-10 30 22M-30 22 30-10M0-36v84M-22-28l44 68M22-28l-44 68" stroke="#C98F22" stroke-width="2" opacity=".55"/>
+              <path d="M0-36c-10-16-6-28 4-36 2 12 8 20 16 24-6 6-12 10-20 12Z" fill="#6B8E4E"/>
+              <path d="M-4-36c-14-6-22-2-28 6 10 2 18 6 24 12M6-36c14-6 22-2 28 6-10 2-18 6-24 12" fill="#6B8E4E"/>
+            </g>
+            <g transform="translate(458 492)">
+              <path d="M0 30C-30 20-40-6-28-28-8-24 4-8 8 10 10-10 22-26 40-30 40-6 26 18 0 30Z" fill="#4F7A3A"/>
+              <path d="M0 30C-14 14-18-4-12-22M0 30C6 10 16-8 28-20" stroke="#6B8E4E" stroke-width="3" fill="none"/>
+            </g>
+          </svg>
+          <div class="hero-badge hero-badge--top"><span class="pulse"></span> Harvested today</div>
+          <div class="hero-badge hero-badge--bottom"><strong>3</strong> partner co-ops</div>
+        </div>
+      </div>
+    </section>
+    <!-- How it works -->
+    <section class="section" id="how">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">How it works</p>
+          <h2>From the farm to your door in three steps.</h2>
+          <p class="section-sub">No warehouse. No middleman. No guesswork.</p>
+        </div>
+
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step-num">1</span>
+            <span class="step-icon"><svg class="icon" aria-hidden="true"><use href="#i-basket"/></svg></span>
+            <h3>Choose your box</h3>
+            <p>Pick a Family Box, Student Saver or Office Club. Send us a WhatsApp before 8 PM with your zone and any add-ons. We confirm your order and total in the same chat.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num">2</span>
+            <span class="step-icon"><svg class="icon" aria-hidden="true"><use href="#i-sunrise"/></svg></span>
+            <h3>We harvest at dawn</h3>
+            <p>Our partner cooperatives pick and pack your order the next morning. Nothing sits in a warehouse, and nothing is re-sold from another market.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num">3</span>
+            <span class="step-icon"><svg class="icon" aria-hidden="true"><use href="#i-moto"/></svg></span>
+            <h3>We deliver the same day</h3>
+            <p>Your box arrives between 10 AM and 4 PM. Pay with eKash or cash. If anything isn't fresh, tell us and we'll replace it on your next delivery.</p>
+          </li>
+        </ol>
+
+        <div class="section-cta reveal">
+          <a class="btn btn--primary" href="https://wa.me/2507XXXXXXXX?text=Muraho%20Umurima%20Fresh!%20I%27d%20like%20to%20start%20an%20order.%20My%20zone%20is%3A%20____.%20My%20name%20is%3A%20____." target="_blank" rel="noopener">
+            Start your order
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </a>
+          <p class="section-note">Order before 8 PM · Delivered 10 AM–4 PM, Mon–Sat</p>
+        </div>
+      </div>
+    </section>
+    <!-- Boxes -->
+    <section class="section section--alt" id="boxes">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Our boxes</p>
+          <h2>Pick the box that fits your week.</h2>
+          <p class="section-sub">Fixed contents. Fixed prices. No surprises.</p>
+        </div>
+
+        <div class="box-grid">
+          <article class="box-card box-card--featured reveal">
+            <span class="badge">Most popular</span>
+            <h3>Family Box</h3>
+            <p class="box-price"><span class="amount">RWF 14,500</span><span class="unit">delivery included</span></p>
+            <ul class="box-list">
+              <li>3 kg Irish potatoes</li>
+              <li>1.5 kg tomatoes</li>
+              <li>1 kg onions</li>
+              <li>1 kg carrots</li>
+              <li>1 cabbage</li>
+              <li>10 eggs</li>
+              <li>4 bananas</li>
+              <li>1 pineapple</li>
+            </ul>
+            <p class="box-good">Good for 3–5 people · 4–5 days of fresh staples</p>
+            <a class="btn btn--primary btn--block" href="https://wa.me/2507XXXXXXXX?text=Muraho%20Umurima%20Fresh!%20I%27d%20like%20to%20order%20the%20Family%20Box.%20My%20zone%20is%3A%20____.%20My%20name%20is%3A%20____." target="_blank" rel="noopener">Order the Family Box</a>
+          </article>
+
+          <article class="box-card reveal">
+            <span class="badge badge--leaf">Best value</span>
+            <h3>Student Saver</h3>
+            <p class="box-price"><span class="amount">RWF 4,500</span><span class="unit">hostel pickup</span></p>
+            <ul class="box-list">
+              <li>1 kg Irish potatoes</li>
+              <li>0.5 kg tomatoes</li>
+              <li>0.5 kg onions</li>
+              <li>1 bunch dodo</li>
+              <li>3 eggs</li>
+              <li>2 bananas</li>
+            </ul>
+            <p class="box-good">Good for 1–2 students · free pickup at partner hostels</p>
+            <p class="box-fine">Home delivery +RWF 1,000.</p>
+            <a class="btn btn--ghost btn--block" href="https://wa.me/2507XXXXXXXX?text=Muraho%20Umurima%20Fresh!%20I%27d%20like%20to%20order%20the%20Student%20Saver.%20My%20hostel%2Fzone%20is%3A%20____.%20My%20name%20is%3A%20____." target="_blank" rel="noopener">Order the Student Saver</a>
+          </article>
+
+          <article class="box-card reveal">
+            <span class="badge badge--dark">For teams</span>
+            <h3>Office Club</h3>
+            <p class="box-price"><span class="amount">RWF 13,900</span><span class="unit">per box · 5 boxes minimum</span></p>
+            <ul class="box-list">
+              <li>Same contents as the Family Box</li>
+              <li>One delivery</li>
+              <li>One monthly invoice</li>
+            </ul>
+            <p class="box-good">One delivery, one invoice, one happy team.</p>
+            <a class="btn btn--ghost btn--block" href="https://wa.me/2507XXXXXXXX?text=Muraho%20Umurima%20Fresh!%20I%27d%20like%20to%20set%20up%20an%20Office%20Club%20drop.%20My%20company%20is%3A%20____.%20My%20zone%20is%3A%20____." target="_blank" rel="noopener">Set up an office drop</a>
+          </article>
+        </div>
+
+        <p class="box-footnote reveal">Box contents change slightly with the season. We'll always tell you before delivery. Prices updated November 2026.</p>
+      </div>
+    </section>
+    <!-- Delivery -->
+    <section class="section" id="delivery">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Delivery</p>
+          <h2>Next-day delivery across Kigali.</h2>
+          <p class="section-sub">Order before 8 PM. We harvest at dawn and deliver between 10 AM and 4 PM.</p>
+        </div>
+
+        <div class="delivery-grid">
+          <div class="delivery-info reveal">
+            <div class="zone-card">
+              <div class="zone-head"><span class="zone-name">Zone A</span><span class="zone-fee">RWF 1,000</span></div>
+              <p class="zone-areas">Remera · Kimironko · Kacyiru · Nyarutarama</p>
+              <p class="zone-note">Free with Family Box and Office Club.</p>
+            </div>
+            <div class="zone-card">
+              <div class="zone-head"><span class="zone-name">Zone B</span><span class="zone-fee">RWF 1,500</span></div>
+              <p class="zone-areas">Nyamirambo · Gikondo · Kanombe · City Center</p>
+              <p class="zone-note">Free with Family Box and Office Club.</p>
+            </div>
+            <div class="zone-card zone-card--muted">
+              <div class="zone-head"><span class="zone-name">Custom orders</span><span class="zone-fee">Free above RWF 20,000</span></div>
+              <p class="zone-areas">All zones</p>
+              <p class="zone-note">Outside these zones? Message us for a quote.</p>
+            </div>
+
+            <ul class="delivery-points">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg> Order by 8 PM for next-day delivery.</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Delivery window: 10 AM–4 PM, Monday to Saturday.</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Sunday orders are delivered on Monday.</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Not home? We'll call and leave the box with your building's concierge.</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg> Packed in insulated crates. Greens first; eggs ride on top.</li>
+            </ul>
+
+            <a class="btn btn--primary" href="https://wa.me/2507XXXXXXXX?text=Muraho!%20Is%20my%20area%20covered%3F%20My%20zone%2Farea%20is%3A%20____." target="_blank" rel="noopener">
+              Check my zone on WhatsApp
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+          </div>
+
+          <div class="delivery-map reveal" aria-hidden="true">
+            <svg viewBox="0 0 420 460" class="map-svg">
+              <rect width="420" height="460" rx="24" fill="#F2EBDD"/>
+              <g stroke="#DCD2BE" stroke-width="1.5" fill="none" opacity=".9">
+                <path d="M40 90 380 60M30 170 390 140M20 250 400 220M30 330 390 300M50 410 370 380"/>
+                <path d="M80 40 60 420M160 30 150 430M240 20 245 440M320 30 330 420"/>
+              </g>
+              <path d="M60 300c40-40 60-90 120-110s110 10 160-40" stroke="#C9BFA9" stroke-width="14" fill="none" stroke-linecap="round"/>
+              <path d="M60 300c40-40 60-90 120-110s110 10 160-40" stroke="#FAF7EF" stroke-width="4" fill="none" stroke-dasharray="8 10" stroke-linecap="round"/>
+              <g>
+                <path d="M235 105c45-25 95-10 130 22 22 20 26 55 10 82-18 30-60 38-100 32-38-6-70-26-72-62-2-30 10-58 32-74Z" fill="#2E7D4F" opacity=".28"/>
+                <path d="M236 108c43-22 90-8 124 22 20 19 25 50 10 76-17 28-56 36-94 30-36-6-66-24-68-58-2-28 9-54 28-70Z" fill="none" stroke="#2E7D4F" stroke-width="2.5"/>
+                <circle cx="292" cy="168" r="7" fill="#1F5D3A"/>
+                <circle cx="352" cy="196" r="7" fill="#1F5D3A"/>
+                <circle cx="268" cy="232" r="7" fill="#1F5D3A"/>
+                <text x="292" y="154" text-anchor="middle" font-family="Poppins, sans-serif" font-size="13" font-weight="600" fill="#1F5D3A">Zone A</text>
+              </g>
+              <g>
+                <path d="M55 210c30-18 70-12 96 12 18 17 20 48 4 70-18 24-52 28-82 20-28-8-46-28-44-56 1-20 10-36 26-46Z" fill="#6B8E4E" opacity=".24"/>
+                <path d="M58 213c28-16 64-10 88 12 17 16 19 43 4 63-16 22-47 26-74 18-26-7-42-25-40-51 1-18 8-32 22-42Z" fill="none" stroke="#6B8E4E" stroke-width="2.5"/>
+                <circle cx="104" cy="264" r="7" fill="#4F7A3A"/>
+                <circle cx="70" cy="300" r="7" fill="#4F7A3A"/>
+                <text x="105" y="250" text-anchor="middle" font-family="Poppins, sans-serif" font-size="13" font-weight="600" fill="#4F7A3A">Zone B</text>
+              </g>
+              <g transform="translate(126 380)">
+                <rect width="168" height="40" rx="20" fill="#FFFFFF" opacity=".95"/>
+                <circle cx="20" cy="20" r="6" fill="#F2B233"/>
+                <text x="36" y="25" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#1F5D3A">Kigali delivery zones</text>
+              </g>
+            </svg>
+            <p class="map-caption">Indicative zones — confirmed with your address on WhatsApp.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Why trust us -->
+    <section class="section section--alt" id="why">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Why trust us</p>
+          <h2>Why Kigali families trust <span class="nowrap">Umurima Fresh.</span></h2>
+          <p class="section-sub">Fresh food is a promise. Here's how we keep it.</p>
+        </div>
+
+        <div class="trust-grid">
+          <figure class="trust-figure reveal">
+            <svg viewBox="0 0 360 420" class="farmer-svg" role="img" aria-labelledby="farmerTitle farmerDesc">
+              <title id="farmerTitle">A farmer in Rulindo holding a basket of produce</title>
+              <desc id="farmerDesc">Illustration of a farmer in a green field at sunrise, holding a woven basket of vegetables.</desc>
+              <rect width="360" height="420" rx="24" fill="#DCE6CD"/>
+              <circle cx="286" cy="78" r="42" fill="#F2B233" opacity=".75"/>
+              <path d="M0 268c58-34 116-30 180-10s118 18 180-6v168H0Z" fill="#8FAE6E"/>
+              <path d="M0 310c70-28 120-18 182-2s118 12 178-10v122H0Z" fill="#6B8E4E"/>
+              <g stroke="#587A40" stroke-width="3" opacity=".6">
+                <path d="M40 340c8-22 8-40 4-58M86 356c6-20 6-38 2-56M310 344c-6-22-6-40-2-58M264 360c-6-18-6-36-2-54"/>
+              </g>
+              <g transform="translate(180 258)">
+                <circle cx="0" cy="-112" r="34" fill="#7A5233"/>
+                <path d="M-34-118c0-26 14-42 34-42s34 16 34 42c0 8-12 12-34 12s-34-4-34-12Z" fill="#2E7D4F"/>
+                <path d="M-26-142c2-16 12-26 26-28 14 2 24 12 26 28-14-8-38-8-52 0Z" fill="#1F5D3A"/>
+                <path d="M-44-84c10-10 24-14 44-14s34 4 44 14l22 98h-132Z" fill="#2E7D4F"/>
+                <path d="M-16-84c0 20 8 32 16 32s16-12 16-32" fill="none" stroke="#F2EBDD" stroke-width="5"/>
+                <path d="M-70 14h140l-14 76H-56Z" fill="#D8B98B"/>
+                <path d="M-58 22h116M-62 48h124M-66 74h132" stroke="#C29C6A" stroke-width="4" opacity=".7"/>
+                <ellipse cx="-30" cy="10" rx="18" ry="14" fill="#D94F3D"/>
+                <ellipse cx="8" cy="6" rx="16" ry="13" fill="#E8833A"/>
+                <ellipse cx="42" cy="12" rx="14" ry="12" fill="#6B8E4E"/>
+                <circle cx="-20" cy="-4" r="9" fill="#F2C94C"/>
+              </g>
+            </svg>
+            <figcaption class="trust-caption">A partner farmer in Rulindo, picking for this week's boxes.</figcaption>
+          </figure>
+
+          <div class="trust-points">
+            <div class="trust-point reveal">
+              <span class="trust-icon"><svg class="icon" aria-hidden="true"><use href="#i-basket"/></svg></span>
+              <div><h3>Direct from the cooperative</h3><p>We buy directly from three cooperatives in Rulindo and Kamonyi — not from Nyabugogo market. The cooperative's name is on your box.</p></div>
+            </div>
+            <div class="trust-point reveal">
+              <span class="trust-icon"><svg class="icon" aria-hidden="true"><use href="#i-sunrise"/></svg></span>
+              <div><h3>Harvest-day freshness</h3><p>Picked at dawn, packed to order, delivered the same day. Nothing sits in a warehouse overnight.</p></div>
+            </div>
+            <div class="trust-point reveal">
+              <span class="trust-icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span>
+              <div><h3>Replacement guarantee</h3><p>If anything isn't fresh, tell us on WhatsApp. We'll replace it on your next delivery, no questions asked.</p></div>
+            </div>
+            <div class="trust-point reveal">
+              <span class="trust-icon"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span>
+              <div><h3>Fixed, fair prices</h3><p>The price you see is the price you pay. No bargaining, no surprise transport costs, no "market price" on the day.</p></div>
+            </div>
+            <div class="trust-point reveal">
+              <span class="trust-icon"><svg class="icon" aria-hidden="true"><use href="#i-cash"/></svg></span>
+              <div><h3>Farmer-first</h3><p>We pay our partner cooperatives every week. Ask us what we pay — we'll tell you.</p></div>
+            </div>
+            <div class="trust-point reveal">
+              <span class="trust-icon"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></span>
+              <div><h3>Real traceability</h3><p>Every box carries the name of the cooperative that grew your food. You'll know where your dinner came from.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-cta reveal">
+          <a class="btn btn--ghost" href="https://wa.me/2507XXXXXXXX?text=Muraho!%20Tell%20me%20about%20this%20week%27s%20farm%20and%20cooperative." target="_blank" rel="noopener">Ask us about this week's farm</a>
+          <p class="section-note">We'll tell you exactly where this week's produce came from.</p>
+        </div>
+      </div>
+    </section>
+    <!-- Payment -->
+    <section class="section" id="payment">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Payment</p>
+          <h2>Pay the way you already pay.</h2>
+          <p class="section-sub">No card. No account. No app download.</p>
+        </div>
+
+        <div class="pay-grid">
+          <div class="pay-tile reveal">
+            <span class="pay-icon"><svg class="icon" aria-hidden="true"><use href="#i-qr"/></svg></span>
+            <h3>eKash QR</h3>
+            <p>Scan one QR with MTN MoMo, Airtel Money or your bank app. One code, any wallet.</p>
+          </div>
+          <div class="pay-tile reveal">
+            <span class="pay-icon"><svg class="icon" aria-hidden="true"><use href="#i-cash"/></svg></span>
+            <h3>Cash on delivery</h3>
+            <p>First time? Pay the rider in cash when your box arrives. Count the eggs before you pay — we'll wait.</p>
+          </div>
+          <div class="pay-tile reveal">
+            <span class="pay-icon"><svg class="icon" aria-hidden="true"><use href="#i-invoice"/></svg></span>
+            <h3>Office invoice</h3>
+            <p>Ordering for your team? We'll send one monthly invoice for all Office Club boxes.</p>
+            <p class="pay-fine">Available for confirmed Office Club accounts.</p>
+          </div>
+        </div>
+
+        <div class="security-strip reveal" role="note">
+          <svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg>
+          <p><strong>We will never ask for your MoMo PIN</strong> or send you a payment link on WhatsApp. If someone does, it isn't us.</p>
+        </div>
+
+        <p class="pay-marks reveal">eKash · MTN MoMo · Airtel Money · Cash on delivery</p>
+      </div>
+    </section>
+    <!-- Contact -->
+    <section class="contact" id="contact">
+      <div class="container contact-inner">
+        <div class="contact-copy reveal">
+          <p class="eyebrow eyebrow--light">WhatsApp</p>
+          <h2>Your box is one <span class="nowrap">message away.</span></h2>
+          <p class="contact-sub">Send your name, zone and box. We reply in under 5 minutes, 7 AM–8 PM.</p>
+          <a class="btn btn--light btn--lg" href="https://wa.me/2507XXXXXXXX?text=Muraho%20Umurima%20Fresh!%20I%27d%20like%20to%20order%3A%20%5BFamily%20Box%20%2F%20Student%20Saver%20%2F%20Office%20Club%5D.%20My%20zone%20is%3A%20%5BZone%20A%20%2F%20Zone%20B%5D.%20My%20name%20is%3A%20%5Byour%20name%5D." target="_blank" rel="noopener">
+            <svg class="icon icon--solid" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+            Chat on WhatsApp
+          </a>
+          <p class="contact-alt">Prefer to talk? Call the same number. We're a small team — you'll reach a person, not a bot.</p>
+        </div>
+
+        <ul class="contact-list reveal">
+          <li>
+            <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+            <div><span>WhatsApp / call</span><a href="tel:+250783346754">+250 783346754</a><em>Placeholder — replace before launch</em></div>
+          </li>
+          <li>
+            <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
+            <div><span>Email</span><a href="mailto:hello@umurimafresh.rw">hello@umurimafresh.rw</a><em>Placeholder — confirm domain</em></div>
+          </li>
+          <li>
+            <svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>
+            <div><span>Hours</span><strong>Mon–Sat 7 AM–8 PM</strong><strong>Sun 9 AM–5 PM</strong></div>
+          </li>
+          <li>
+            <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+            <div><span>Location</span><strong>Kigali, Rwanda</strong></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="logo logo--footer" href="#top" aria-label="Umurima Fresh home">
+          <span class="logo-mark"><svg class="logo-svg" viewBox="0 0 40 40" aria-hidden="true"><use href="#i-logo"/></svg></span>
+          <span class="logo-text">Umurima <em>Fresh</em></span>
+        </a>
+        <p class="footer-tagline">Harvested at dawn. Delivered by dinner.</p>
+        <p class="footer-line">Proudly grown in Rwanda.</p>
+      </div>
+
+      <nav class="footer-col" aria-label="Shop">
+        <h3>Shop</h3>
+        <a href="#boxes">Family Box</a>
+        <a href="#boxes">Student Saver</a>
+        <a href="#boxes">Office Club</a>
+        <a href="#boxes">This week's box</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="Learn">
+        <h3>Learn</h3>
+        <a href="#how">How it works</a>
+        <a href="#delivery">Delivery zones</a>
+        <a href="#why">Why trust us</a>
+        <a href="#payment">Payment options</a>
+      </nav>
+
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <a href="https://wa.me/250783346754" target="_blank" rel="noopener">+250 783346754</a>
+        <a href="mailto:hello@umurimafresh.rw">hello@umurimafresh.rw</a>
+        <span>Kigali, Rwanda</span>
+        <span class="footer-social">Instagram · TikTok <em>(soon)</em></span>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p class="footer-pay">eKash · MTN MoMo · Airtel Money · Cash on delivery</p>
+      <p class="footer-legal">© 2026 Umurima Fresh. All prices in RWF. Box contents may vary with the season. Delivery terms apply.</p>
+      <p class="footer-safe"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg> We never ask for your MoMo PIN or send payment links on WhatsApp.</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a class="float-wa" href="https://wa.me/2507XXXXXXXX?text=Muraho%20Umurima%20Fresh!%20I%27d%20like%20to%20order." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg class="icon icon--solid" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
